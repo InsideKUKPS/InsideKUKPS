@@ -1,22 +1,27 @@
-
+var map;
+var markers = [];
 function initMap() {
     var uluru = {lat: 14.024017, lng:99.974597};
-    /*$.ajax({
-      url : "js/AllLocation.json",
-      type : "get",
-      datatype : "json",
-      success: function(data){
-        uluru={lat : data.lat, lng : data.lng}
-        alert(data.lng);
-      }
-    });*/
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 13,
-      center: uluru
+    map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: uluru
     });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      
-      map: map
-    });
-  }
+    for(var i=0;i<obj.length;i++){
+      marker = new google.maps.Marker({
+      position: {lat:obj[i].lat,lng:obj[i].lng},
+      map: map,
+      icon:"",
+      animation: google.maps.Animation.DROP,
+      });
+    }
+  };
+  document.addEventListener('init', function(event) {
+    var page = event.target;
+    if (page.id === 'index') {
+      page.querySelector('#push-button').onclick = function() {
+        document.querySelector('#myNavigator').pushPage('Search.html', {data: {title: 'Search Page'}});
+      };
+    } else if (page.id === 'search') {
+      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+    }
+  });
