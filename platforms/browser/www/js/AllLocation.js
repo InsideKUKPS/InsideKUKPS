@@ -13,6 +13,6 @@ var obj = [
     {name:"",category:"",lat:14,lng:99},
     {name:"",category:"",lat:14,lng:99},
 ];
-angular.module('myApp', []).controller('namesCtrl', function($scope) {
-    $scope.obj;
-})
+/*angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    $scope.obj ;
+})*/
