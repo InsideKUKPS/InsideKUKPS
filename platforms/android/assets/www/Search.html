@@ -19,29 +19,34 @@
         Inside KU-KPS
     </title>
 </head>
-<body>
-    <ons-page id="search">
-        <ons-toolbar>
-            <div class="left">
-                <ons-back-button></ons-back-button>
-            </div>
-        </ons-toolbar>
-        <div class="center">
-            <input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%;height:30px;">
-        </div>
-        <ons-card>
-            <ons-list>
-                <ons-list-item ng-repeat="x in obj">
-                    <div class="left">
 
+<body>
+    <template id="Search.html">
+        <div ng-app="myApp" ng-controller="namesCtrl">
+            <ons-page id="Search">
+                <ons-toolbar>
+                    <div class="left">
+                        <ons-back-button></ons-back-button>
                     </div>
                     <div class="center">
-
+                        <input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%; height:30px; text-align:center">
                     </div>
-                </ons-list-item>
-            </ons-list>
-        </ons-card>
-    </ons-page>
+                </ons-toolbar>
+
+                <ons-card>
+                    <ons-list>
+                        <ons-list-item ng-repeat="x in obj">
+                            <div class="left">
+
+                            </div>
+                            <div class="center">
+                                {{x.name}}
+                            </div>
+                        </ons-list-item>
+                    </ons-list>
+                </ons-card>
+            </ons-page>
+    </template>
 </body>
 
 </html>

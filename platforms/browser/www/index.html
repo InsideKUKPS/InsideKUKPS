@@ -20,26 +20,29 @@
 
 <body>
     <ons-navigator swipeable id="myNavigator" page="index.html"></ons-navigator>
-    <ons-page id="index">
-        <ons-toolbar style="background-color:#8CC084">
-            <div class="left">
-                <ons-toolbar-button>
-                    <ons-icon icon="md-menu" style="color:white"></ons-icon>
-                </ons-toolbar-button>
-            </div>
-            <div class="center" style="color:white">
-                Inside KU-KPS
-            </div>
-            <div class="right" style="margin-right:20px;margin-top :5px;">
-                <button style="background-color:transparent;border:none;" id="push-button">
-                    <ons-icon icon="md-search" style="color:white" size="30px"></ons-icon>
-                </button>
-            </div>
-        </ons-toolbar>
-        <div id="map" onload="drop()"></div>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
-        </script>
-    </ons-page>
+    <template id="index.html">
+        <ons-page id="index">
+            <ons-toolbar style="background-color:#8CC084">
+                <div class="left">
+                    <ons-toolbar-button>
+                       <ons-icon icon="md-menu" style="color:white"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center" style="color:white">
+                    Inside KU-KPS
+                </div>
+                <div class="right" style="margin-right:20px;margin-top :5px;">
+                    <button style="background-color:transparent;border:none;" id="push-button">
+                        <ons-icon icon="md-search" style="color:white" size="30px"></ons-icon>
+                    </button>
+                </div>
+            </ons-toolbar>
+            <div id="map" onload="drop()"></div>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
+            </script>
+        </ons-page>
+    </template>
 </body>
+
 </html>
 <!-- test by aun -->

@@ -19,7 +19,7 @@ function initMap() {
     var page = event.target;
     if (page.id === 'index') {
       page.querySelector('#push-button').onclick = function() {
-        document.querySelector('#myNavigator').pushPage('Search.html', {data: {title: 'Search Page'}});
+        document.querySelector("#myNavigator").pushPage("search.html", {data: {title: "Search Page"}});
       };
     } else if (page.id === 'search') {
       page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
