@@ -14,5 +14,5 @@ var obj = [
     {name:"",category:"dorm",lat:14,lng:99},
 ];
 angular.module('myApp', []).controller('namesCtrl', function($scope) {
-    $scope.obj = obj;
+    $scope.Obj = obj;
 });
