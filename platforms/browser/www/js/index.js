@@ -19,9 +19,13 @@ function initMap() {
     var page = event.target;
     if (page.id === 'index') {
       page.querySelector('#push-button').onclick = function() {
-        document.querySelector("#myNavigator").pushPage("search.html", {data: {title: "Search Page"}});
+        document.querySelector('#myNavigator').pushPage('search.html', {data: {title: ""}});
       };
     } else if (page.id === 'search') {
-      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+      //page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+      document.querySelector('#back-button').onClick = function() {
+        // Reset the whole stack instead of popping 1 page
+        document.querySelector('#myNavigator').resetToPage('index.html');
+      };
     }
   });

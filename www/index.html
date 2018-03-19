@@ -22,10 +22,10 @@
     <ons-navigator swipeable id="myNavigator" page="index.html"></ons-navigator>
     <template id="index.html">
         <ons-page id="index">
-            <ons-toolbar style="background-color:#8CC084">
+            <ons-toolbar style="background-color:#8CC084;" >
                 <div class="left">
                     <ons-toolbar-button>
-                       <ons-icon icon="md-menu" style="color:white"></ons-icon>
+                        <ons-icon icon="md-menu" style="color:white"></ons-icon>
                     </ons-toolbar-button>
                 </div>
                 <div class="center" style="color:white">
@@ -37,12 +37,38 @@
                     </button>
                 </div>
             </ons-toolbar>
-            <div id="map" ></div>
+            <div id="map"></div>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
             </script>
+        </ons-page>
+    </template>
+
+    <template id="search.html">
+        <ons-page id="search">
+            <div ng-app="myApp" ng-controller="namesCtrl"></div>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-back-button id="back-button"></ons-back-button>
+                </div>
+                <div class="center">
+                    <input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%; height:30px; text-align:center">
+                </div>
+            </ons-toolbar>
+
+            <ons-card>
+                <ons-list>
+                    <ons-list-item ng-repeat="x in obj">
+                        <div class="left">
+
+                        </div>
+                        <div class="center">
+                            {{x.name}}
+                        </div>
+                    </ons-list-item>
+                </ons-list>
+            </ons-card>
         </ons-page>
     </template>
 </body>
 
 </html>
-<!-- test by aun -->
