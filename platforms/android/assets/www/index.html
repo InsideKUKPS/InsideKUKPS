@@ -22,7 +22,7 @@
     <ons-navigator swipeable id="myNavigator" page="index.html"></ons-navigator>
     <template id="index.html">
         <ons-page id="index">
-            <ons-toolbar style="background-color:#8CC084;" >
+            <ons-toolbar style="background-color:#8CC084; height:11%" >
                 <div class="left">
                     <ons-toolbar-button>
                         <ons-icon icon="md-menu" style="color:white"></ons-icon>
@@ -37,7 +37,7 @@
                     </button>
                 </div>
             </ons-toolbar>
-            <div id="map"></div>
+            <div id="map" style="margin-top:1%"></div>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
             </script>
         </ons-page>
@@ -46,18 +46,17 @@
     <template id="search.html">
         <ons-page id="search">
             <div ng-app="myApp" ng-controller="namesCtrl"></div>
-            <ons-toolbar>
+            <ons-toolbar style="background-color:#8CC084; height:65px">
                 <div class="left">
-                    <ons-back-button id="back-button"></ons-back-button>
+                    <ons-back-button id="back-button" ></ons-back-button>
                 </div>
                 <div class="center">
-                    <input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%; height:30px; text-align:center">
+                    <input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%; height:60%; text-align:center">
                 </div>
             </ons-toolbar>
-
-            <ons-card>
+            <ons-card style="margin-top:12%">
                 <ons-list>
-                    <ons-list-item ng-repeat="x in obj">
+                    <ons-list-item ng-repeat="x in r | filter : 'test'">
                         <div class="left">
 
                         </div>
