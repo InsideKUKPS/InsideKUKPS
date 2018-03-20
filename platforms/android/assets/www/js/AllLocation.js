@@ -1,3 +1,6 @@
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    $scope.Obj = obj;
+});
 obj = [
     {name:"คณะเกษตร",category:"education",lat:14.024165,lng:99.973146},
     {name:"ตึกปฏิบัติการทางวิทยาศาสตร์ [SC 14]",category:"education",lat:14.025943,lng:99.977739},
@@ -13,6 +16,3 @@ obj = [
     {name:"7-11",category:"market",lat:14.021865,lng:99.977383},
     {name:"",category:"dorm",lat:14,lng:99},
 ];
-angular.module('myApp', []).controller('namesCtrl', function($scope) {
-    $scope.Obj = obj;
-});
