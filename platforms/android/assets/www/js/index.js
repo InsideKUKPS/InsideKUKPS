@@ -1,4 +1,3 @@
-
 var map;
 var markers = [];
 var Message;
@@ -48,4 +47,3 @@ function initMap() {
       };
     }
   });
-

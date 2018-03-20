@@ -9,7 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
                         },
@@ -30,7 +29,6 @@
                             "count": 1
                         },
                         {
-
                             "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -40,7 +38,6 @@
                         },
                         {
                             "xml": "<allow-navigation href=\"cdvfile:*\" />",
-
                             "count": 1
                         }
                     ]
@@ -62,7 +59,6 @@
                             "count": 1
                         },
                         {
-
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
                         }
@@ -74,8 +70,6 @@
         }
     },
     "installed_plugins": {
-
-
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
@@ -91,19 +85,16 @@
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-file": {
-
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {},
     "modules": [
         {
-
             "id": "cordova-plugin-device.device",
             "file": "plugins/cordova-plugin-device/www/device.js",
             "pluginId": "cordova-plugin-device",
@@ -338,7 +329,6 @@
                 "cordova"
             ],
             "runs": true
-
         }
     ],
     "plugin_metadata": {
