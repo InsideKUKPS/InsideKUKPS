@@ -12,28 +12,64 @@
     <script type="text/javascript" src="uilib/angular.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+
+    <script type="text/javascript" src="js/AllLocation.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Inside KU-KPS</title>
 </head>
 
 <body>
-    <ons-toolbar style="background-color:#8CC084">
-            <div class="left">
+    <ons-navigator swipeable id="myNavigator" page="index.html"></ons-navigator>
+    <template id="index.html">
+        <ons-page id="index">
+            <ons-toolbar style="background-color:#8CC084; height:11%;">
+                <div class="left">
                     <ons-toolbar-button>
-                      <ons-icon icon="md-menu" style="color:white"></ons-icon>
+                        <ons-icon icon="md-menu" style="color:white"></ons-icon>
                     </ons-toolbar-button>
-                  </div>
-            <div class="center" style="color:white">
-                 Inside KU-KPS
-            </div>
-            <div class="right" style="margin-right:20px;">
-                <ons-icon icon="md-search" style="color:white" size="30px"></ons-icon>
-            </div>
-    </ons-toolbar>
-    <div id="map"></div>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
-    </script>
+                </div>
+                <div class="center" style="color:white">
+                    Inside KU-KPS
+                </div>
+                <div class="right" style="margin-right:20px;margin-top :5px;">
+                    <button style="background-color:transparent;border:none;" id="push-button">
+                        <ons-icon icon="md-search" style="color:white" size="30px"></ons-icon>
+                    </button>
+                </div>
+            </ons-toolbar>
+            <div id="map" style="margin-top:1%"></div>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
+            </script>
+        </ons-page>
+    </template>
+    
+    <div ng-app="myApp" ng-controller="namesCtrl">
+        <template id="search.html">
+            <ons-page id="search">
+                <ons-toolbar style="background-color:#8CC084; height:65px">
+                    <div class="left">
+                        <ons-back-button id="back-button"></ons-back-button>
+                    </div>
+                    <div class="center">
+                        <input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%; height:60%; text-align:center">
+                    </div>
+                </ons-toolbar>
+                <ons-card style="margin-top:9%">
+                    <ons-list>
+                        <ons-list-item ng-repeat="x in Obj | filter:test">
+                            <div class="left">
+                            </div>
+                            <div class="center">
+                                <span class="list-item__title">{{x.name}}</span>
+                                <span class="list-item__subtitle">{{x.name}}</span>
+                            </div>
+                        </ons-list-item>
+                    </ons-list>
+                </ons-card>
+            </ons-page>
+        </template>
+    </div>
 </body>
+
 </html>
-<!-- test by aun -->
+
