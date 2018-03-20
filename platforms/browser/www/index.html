@@ -42,6 +42,7 @@
             </script>
         </ons-page>
     </template>
+    
     <div ng-app="myApp" ng-controller="namesCtrl">
         <template id="search.html">
             <ons-page id="search">
@@ -53,7 +54,7 @@
                         <input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%; height:60%; text-align:center">
                     </div>
                 </ons-toolbar>
-                <ons-card style="margin-top:12%">
+                <ons-card style="margin-top:9%">
                     <ons-list>
                         <ons-list-item ng-repeat="x in Obj | filter:test">
                             <div class="left">
