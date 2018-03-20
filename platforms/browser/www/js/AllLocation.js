@@ -1,5 +1,5 @@
 angular.module('myApp', []).controller('namesCtrl', function($scope) {
-    $scope.Obj = obj;
+    $scope.data = obj;
 });
 obj = [
     {name:"คณะเกษตร",category:"education",lat:14.024165,lng:99.973146},
