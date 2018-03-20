@@ -19,12 +19,35 @@
 </head>
 
 <body>
-    <ons-navigator swipeable id="myNavigator" page="index.html"></ons-navigator>
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+            <ons-page>
+                <ons-list>
+                    <ons-list-item onclick="fn.load('index.html')" tappable>
+                        Home
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('call.html')" tappable>
+                        Call
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('information.html')" tappable>
+                        Information
+                    </ons-list-item>
+                    <ons-list-item onclick="fn.load('about.html')" tappable>
+                        About
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content>
+            <ons-navigator id="navi" page="index.html"></ons-navigator>
+        </ons-splitter-content>
+    </ons-splitter>
+    
     <template id="index.html">
         <ons-page id="index">
             <ons-toolbar style="background-color:#8CC084; height:11%;">
                 <div class="left">
-                    <ons-toolbar-button>
+                    <ons-toolbar-button onclick="fn.open()">
                         <ons-icon icon="md-menu" style="color:white"></ons-icon>
                     </ons-toolbar-button>
                 </div>
@@ -42,7 +65,7 @@
             </script>
         </ons-page>
     </template>
-    
+
     <div ng-app="myApp" ng-controller="namesCtrl">
         <template id="search.html">
             <ons-page id="search">
@@ -70,5 +93,9 @@
         </template>
     </div>
 </body>
+<script>
+
+
+</script>
 
 </html>

@@ -47,3 +47,21 @@ function initMap() {
       };
     }
   });
+      //tab hamburger
+      window.fn = {};
+
+      window.fn.open = function () {
+          var menu = document.getElementById('menu');
+          menu.open();
+      };
+      window.fn.load = function (page) {
+          if (page == "index.html") {
+              location.reload();
+          }
+          else {
+              var menu = document.getElementById('menu');
+              var navi = document.getElementById('navi');
+              menu.close();
+              navi.resetToPage(page, { animation: 'fade' });
+          }
+      };
