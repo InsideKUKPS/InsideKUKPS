@@ -19,8 +19,8 @@
 </head>
 
 <body>
-    <ons-navigator swipeable id="myNavigator" page="index.html"></ons-navigator>
     <div ng-app="myApp" ng-controller="namesCtrl">
+    <ons-navigator swipeable id="myNavigator" page="index.html">
         <template id="index.html">
             <ons-page id="index">
                 <ons-toolbar style="background-color:#8CC084;  height:65px;">
@@ -66,6 +66,7 @@
                 </ons-card>
             </ons-page>
         </template>
+    </ons-navigator>
     </div>
 </body>
 
