@@ -33,23 +33,6 @@ function attachMessage(marker, Message) {
   });
 }
 
-document.addEventListener('init', function (event) {
-  var page = event.target;
-  if (page.id === 'index') {
-    page.querySelector('#push-button').onclick = function () {
-      document.querySelector('#myNavigator').pushPage('search.html',
-        {
-          data:
-            {
-              title: '<input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%; height:60%; text-align:center">'
-            }
-        });
-    };
-  } else if (page.id === 'search') {
-    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
-  }
-});
-
 angular.module('myApp', []).controller('namesCtrl', function ($scope) {
   $scope.data = obj;
 });

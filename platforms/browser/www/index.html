@@ -20,7 +20,14 @@
 
 <body>
     <div ng-app="myApp" ng-controller="namesCtrl">
-    <ons-navigator swipeable id="myNavigator" page="index.html">
+        <ons-page>
+            <ons-tabbar swipeable position="bottom">
+                <ons-tab page="index.html" label="Home" icon="ion-home, material:md-home"  active>
+                </ons-tab>
+                <ons-tab page="search.html" label="search" icon="md-search" active-icon="md-search">
+                </ons-tab>
+            </ons-tabbar>
+        </ons-page>
         <template id="index.html">
             <ons-page id="index">
                 <ons-toolbar style="background-color:#8CC084;  height:65px;">
@@ -32,11 +39,6 @@
                     <div class="center" style="color:white">
                         Inside KU-KPS
                     </div>
-                    <div class="right" style="margin-right:20px;margin-top :5px;">
-                        <button style="background-color:transparent;border:none;" id="push-button">
-                            <ons-icon icon="md-search" style="color:white" size="30px"></ons-icon>
-                        </button>
-                    </div>
                 </ons-toolbar>
                 <div id="map" style="margin-top:1%"></div>
                 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
@@ -47,26 +49,26 @@
         <template id="search.html">
             <ons-page id="search">
                 <ons-toolbar style="background-color:#8CC084; height:65px">
-                    <div class="left">
-                        <ons-back-button id="back-button"></ons-back-button>
+                    <div class="center" style="margin-left:10%;margin-right:5%">
+                        <input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%; height:60%; text-align:center">
                     </div>
                 </ons-toolbar>
-                <ons-card style="margin-top:9%">
+                <ons-card style="margin-top:5%">
                     <ons-list>
-                            <ons-list-item ng-repeat="i in data| filter : test" onclick="">
-                                <div class="left">
-                                    <img src="img/{{i.category}}.svg" alt="" width="70px" height="90px">
-                                </div>
-                                <div class="center" style="margin-left:5%">
-                                    <span class="list-item__title">{{i.name}}</span>
-                                    <span class="list-item__subtitle">{{i.name}}</span>
-                                </div>
-                            </ons-list-item>
+                        <ons-list-item ng-repeat="i in data| filter : test" onclick="">
+                            <div class="left">
+                                <img src="img/{{i.category}}.svg" alt="" width="70px" height="90px">
+                            </div>
+                            <div class="center" style="margin-left:5%">
+                                <span class="list-item__title">{{i.name}}</span>
+                                <span class="list-item__subtitle">{{i.name}}</span>
+                            </div>
+                        </ons-list-item>
                     </ons-list>
                 </ons-card>
             </ons-page>
         </template>
-    </ons-navigator>
+        </ons-navigator>
     </div>
 </body>
 
