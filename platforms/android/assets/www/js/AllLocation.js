@@ -19,7 +19,7 @@ obj = [
      {name:"ตึกปฏิบัติการทางวิทยาศาสตร์ [SC 7]",category:"education",lat:14.024958,lng:99.976910},
      {name:"ตึกปฏิบัติการทางวิทยาศาสตร์ [SC 8]",category:"education",lat:14.025085,lng:99.976905},
      {name:"ตึกปฏิบัติการทางวิทยาศาสตร์ [SC 9]",category:"education",lat:14.024490,lng:99.978268},
-  //
+  
      {name:"สำนักหอสมุดกำแพงแสน",category:"education",lat:14.025348,lng:99.974515},   
      {name:"โรงอาหารกลาง 1",category:"food",lat:14.022076,lng:99.976481},
      {name:"ศูนย์อาหาร อาคารศูยน์มหาวิทยาลัย",category:"food",lat:14.022974,lng:99.976501},
