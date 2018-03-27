@@ -1,4 +1,4 @@
-var obj = [
+obj = [
       //เกษตร
       {name:"คณะเกษตร",category:"education",lat:14.024165,lng:99.973146},
       {name:"คณะเกษตร",category:"education",lat:14.024165,lng:99.973146},
