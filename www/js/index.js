@@ -68,3 +68,6 @@ window.fn.load = function (page) {
 function openInformation(){
 window.location="information.html"
 }
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+  $scope.Obj = obj;
+});

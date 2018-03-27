@@ -36,7 +36,4 @@ obj = [
      {name:"สหกรณ์ร้านค้า สาขาหอพัก",category:"market",lat:14.027385,lng:99.979620},
      {name:"",category:"dorm",lat:14,lng:99},
  ];
- angular.module('myApp', []).controller('namesCtrl', function($scope) {
-     $scope.Obj = obj;
- });
 
