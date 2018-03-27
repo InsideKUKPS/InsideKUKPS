@@ -14,77 +14,84 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/AllLocation.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Inside KU-KPS</title>
 </head>
 
 <body>
-    <ons-splitter>
-        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
-            <ons-page>
-                <ons-list>
-                    <ons-list-item onclick="fn.load('index.html')" tappable>
-                        Home
-                    </ons-list-item>
-                    <ons-list-item onclick="fn.load('call.html')" tappable>
-                        Call
-                    </ons-list-item>
-                    <ons-list-item onclick="openInformation()" tappable>
-                        Information
-                    </ons-list-item>
-                    <ons-list-item onclick="fn.load('about.html')" tappable>
-                        About
-                    </ons-list-item>
-                </ons-list>
-            </ons-page>
-        </ons-splitter-side>
-        <ons-splitter-content>
-            <ons-navigator id="navi" page="index.html"></ons-navigator>
-        </ons-splitter-content>
-    </ons-splitter>
-    
-    <template id="index.html">
-        <ons-page id="index">
-            <ons-toolbar style="background-color:#8CC084; height:11%;">
-                <div class="left">
-                    <ons-toolbar-button onclick="fn.open()">
-                        <ons-icon icon="md-menu" style="color:white"></ons-icon>
-                    </ons-toolbar-button>
-                </div>
-                <div class="center" style="color:white">
-                    Inside KU-KPS
-                </div>
-                <div class="right" style="margin-right:20px;margin-top :5px;">
-                    <button style="background-color:transparent;border:none;" id="push-button">
-                        <ons-icon icon="md-search" style="color:white" size="30px"></ons-icon>
-                    </button>
-                </div>
-            </ons-toolbar>
-            <div id="map" style="margin-top:1%"></div>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
-            </script>
-        </ons-page>
-    </template>
-
     <div ng-app="myApp" ng-controller="namesCtrl">
+
+        <ons-splitter>
+            <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+                <ons-page>
+                    <ons-list style="padding-top:30%; padding-bottom:200%; background-color:white">
+                        <ons-list-item onclick="fn.load('index.html')" style="margin-top:5%; background-color:#B9E28C" tappable>
+                            <ons-icon icon="ion-home, material:md-home" style="color:white;margin-right:10%"></ons-icon>
+                            <p style="opacity:0.7">Home</p>
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('call.html')" style="margin-top:5%" tappable>
+                            <ons-icon icon="md-phone" style="color:#B9E28C;margin-right:10%"></ons-icon>
+                            <p style="opacity:0.7">Call</p>
+                        </ons-list-item>
+                        <ons-list-item onclick="openInformation()" style="margin-top:5%" tappable>
+                            <ons-icon icon="md-info" style="color:#B9E28C;margin-right:10%"></ons-icon>
+                            <p style="opacity:0.7">Information</p>
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('about.html')" style="margin-top:5%" tappable>
+                            <ons-icon icon="md-help" style="color:#B9E28C;margin-right:10%"></ons-icon>
+                           <p style="opacity:0.7"> About</p>
+                        </ons-list-item>
+                    </ons-list>
+                </ons-page>
+            </ons-splitter-side>
+            <ons-splitter-content id="navi" page="tab.html">
+            </ons-splitter-content>
+        </ons-splitter>
+
+        <template id="tab.html">
+            <ons-tabbar swipeable position="bottom">
+                <ons-tab page="index.html" label="Home" icon="ion-home, material:md-home" active>
+                </ons-tab>
+                <ons-tab page="search.html" label="search" icon="md-search" active-icon="md-search">
+                </ons-tab>
+            </ons-tabbar>
+        </template>
+
+        <template id="index.html">
+            <ons-page id="index">
+                <ons-toolbar style="background-color:#8CC084;">
+                    <div class="left">
+                        <ons-toolbar-button onclick="fn.open()">
+                            <ons-icon icon="md-menu" style="color:white"></ons-icon>
+                        </ons-toolbar-button>
+                    </div>
+                    <div class="center" style="color:white">
+                        Inside KU-KPS
+                    </div>
+                </ons-toolbar>
+                <div id="map" style="margin-top:0%"></div>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
+                </script>
+            </ons-page>
+        </template>
+
         <template id="search.html">
             <ons-page id="search">
-                <ons-toolbar style="background-color:#8CC084; height:65px">
-                    <div class="left">
-                        <ons-back-button id="back-button"></ons-back-button>
-                    </div>
-                    <div class="center">
+                <ons-toolbar style="background-color:#8CC084;">
+                    <div class="center" style="margin-left:10%;margin-right:5%">
                         <input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%; height:60%; text-align:center">
                     </div>
                 </ons-toolbar>
-                <ons-card style="margin-top:9%">
+                <ons-card style="margin-top:5%">
                     <ons-list>
-                        <ons-list-item ng-repeat="x in Obj | filter:test">
+                        <ons-list-item ng-repeat="i in data| filter : test" onclick="">
                             <div class="left">
+                                <img src="img/{{i.category}}.svg" alt="" width="70px" height="90px">
                             </div>
-                            <div class="center">
-                                <span class="list-item__title">{{x.name}}</span>
-                                <span class="list-item__subtitle">{{x.name}}</span>
+                            <div class="center" style="margin-left:5%">
+                                <span class="list-item__title">{{i.name}}</span>
+                                <span class="list-item__subtitle">Lat : {{i.lat}}, Lng : {{i.lng}}</span>
                             </div>
                         </ons-list-item>
                     </ons-list>
@@ -93,6 +100,4 @@
         </template>
     </div>
 </body>
-
-
 </html>
