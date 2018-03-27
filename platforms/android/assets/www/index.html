@@ -28,16 +28,45 @@
                 </ons-tab>
             </ons-tabbar>
         </ons-page>
+        <ons-splitter>
+            <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+                <ons-page>
+                    <ons-list>
+                        <ons-list-item onclick="fn.load('index.html')" tappable>
+                            Home
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('call.html')" tappable>
+                            Call
+                        </ons-list-item>
+                        <ons-list-item onclick="openInformation()" tappable>
+                            Information
+                        </ons-list-item>
+                        <ons-list-item onclick="fn.load('about.html')" tappable>
+                            About
+                        </ons-list-item>
+                    </ons-list>
+                </ons-page>
+            </ons-splitter-side>
+            <ons-splitter-content>
+                <ons-navigator id="navi" page="index.html"></ons-navigator>
+            </ons-splitter-content>
+        </ons-splitter>
+        
         <template id="index.html">
             <ons-page id="index">
-                <ons-toolbar style="background-color:#8CC084;  height:65px;">
+                <ons-toolbar style="background-color:#8CC084; height:11%;">
                     <div class="left">
-                        <ons-toolbar-button>
+                        <ons-toolbar-button onclick="fn.open()">
                             <ons-icon icon="md-menu" style="color:white"></ons-icon>
                         </ons-toolbar-button>
                     </div>
                     <div class="center" style="color:white">
                         Inside KU-KPS
+                    </div>
+                    <div class="right" style="margin-right:20px;margin-top :5px;">
+                        <button style="background-color:transparent;border:none;" id="push-button">
+                            <ons-icon icon="md-search" style="color:white" size="30px"></ons-icon>
+                        </button>
                     </div>
                 </ons-toolbar>
                 <div id="map" style="margin-top:1%"></div>
@@ -71,5 +100,6 @@
         </ons-navigator>
     </div>
 </body>
+
 
 </html>

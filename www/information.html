@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="uilib/uilib/onsen/css/onsenui.css" />
+  <link rel="stylesheet" type="text/css" href="uilib/uilib/onsen/css/onsen-css-components.min.css" />
+  <script type="text/javascript" src="uilib/uilib/onsen/js/onsenui.min.js"></script>
+  <script type="text/javascript" src="uilib/uilib/onsen/js/jquery.min.js"></script>
+  <script type="text/javascript" src="uilib/angular.min.js"></script>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/information.js"></script>
+  <link rel="stylesheet" type="text/css" href="cdnjs.cloudflare.com/font-awesome.min.css">
+  <title>Information</title>
+</head>
+
+<body>
+  <ons-navigator id="navigator" page="info.html"></ons-navigator>
+  <template id="info.html">
+    <ons-page id="index">
+      <ons-toolbar style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <i class="fa fa-angle-left" style="font-size:48px;color:white" onclick="goBack()"> </i>
+        </div>
+        <div class="center" style="color:white">
+          Information
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content">
+          <ons-list onclick="openInfo()">
+            <ons-list-item>
+              <div class="left">
+                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+              </div>
+              <div class="center">
+                <span class="list-item__title">ข้อแนะนำในการผื่นขอผ่อนผันเข้าตรวจเลือกทหารกองประจำการ</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div class="content">
+          <ons-list>
+            <ons-list-item>
+              <div class="left">
+                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+              </div>
+              <div class="center">
+                <span class="list-item__title">การสมัครเรียนวิชาทหาร</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div class="content">
+          <ons-list>
+            <ons-list-item>
+              <div class="left">
+                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+              </div>
+              <div class="center">
+                <span class="list-item__title">การเบิกจ่ายค่ารักษาพยาบาลจาก กองทุนสวัสดิภาพนิสิต มก.กพส.</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div class="content">
+          <ons-list>
+            <ons-list-item>
+              <div class="left">
+                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+              </div>
+              <div class="center">
+                <span class="list-item__title">กำหนดเวลาเปิด-ปิด ประตู มก.กพส</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div class="content">
+          <ons-list>
+            <ons-list-item>
+              <div class="left">
+                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+              </div>
+              <div class="center">
+                <span class="list-item__title">สวัสดิการภายใน มก.กพส.</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div class="content">
+          <ons-list>
+            <ons-list-item>
+              <div class="left">
+                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+              </div>
+              <div class="center">
+                <span class="list-item__title">บริการหอพักนิสิต มก.กพส.</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div class="content">
+          <ons-list>
+            <ons-list-item>
+              <div class="left">
+                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+              </div>
+              <div class="center">
+                <span class="list-item__title">หมายเลขโทรศัพท์ เหตุด่วน-เหตุร้าย</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div class="content">
+          <ons-list>
+            <ons-list-item>
+              <div class="left">
+                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+              </div>
+              <div class="center">
+                <span class="list-item__title">นิสิตขอทำบัตรเข้า – ออก มก.กพส.ได้ที่ งานรักษาความปลอดภัย โทร 0-3435-1151</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div class="content">
+          <ons-list>
+            <ons-list-item>
+              <div class="left">
+                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+              </div>
+              <div class="center">
+                <span class="list-item__title">วิธีป้องกันการโจรกรรมรถ</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div class="content">
+          <ons-list>
+            <ons-list-item>
+              <div class="left">
+                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+              </div>
+              <div class="center">
+                <span class="list-item__title">ข้อแนะนำเมื่อบัตรประจำตัวนิสิตหาย</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="playlist.html">
+      <ons-page id="playlist-page">
+        <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+          <div class="left"><ons-back-button></ons-back-button></div>
+          
+        </ons-toolbar>
+    
+        <div class="content" style="text-align: center;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <div>
+                    <br/>
+                      <div >FOLLOW</div>
+                    </div>
+                
+                </div>
+              </ons-carousel-item>
+            
+              
+            </ons-carousel>
+          </div>
+
+        </div>
+    
+    
+      
+    
+      </ons-page>
+    </template>
+
+</body>
+
+</html>

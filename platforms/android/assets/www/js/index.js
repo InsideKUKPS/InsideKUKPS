@@ -33,6 +33,41 @@ function attachMessage(marker, Message) {
   });
 }
 
+document.addEventListener('init', function (event) {
+  var page = event.target;
+  if (page.id === 'index') {
+    page.querySelector('#push-button').onclick = function () {
+      document.querySelector('#myNavigator').pushPage('search.html', { data: { title: "" } });
+    };
+  } else if (page.id === 'search') {
+    //page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+    document.querySelector('#back-button').onClick = function () {
+      // Reset the whole stack instead of popping 1 page
+      document.querySelector('#myNavigator').resetToPage('index.html');
+    };
+  }
+});
+//tab hamburger
+window.fn = {};
+
+window.fn.open = function () {
+  var menu = document.getElementById('menu');
+  menu.open();
+};
+window.fn.load = function (page) {
+  if (page == "index.html") {
+    location.reload();
+  }
+  else {
+    var menu = document.getElementById('menu');
+    var navi = document.getElementById('navi');
+    menu.close();
+    navi.resetToPage(page, { animation: 'fade' });
+  }
+};
+function openInformation(){
+window.location="information.html"
+}
 angular.module('myApp', []).controller('namesCtrl', function ($scope) {
   $scope.data = obj;
 });
