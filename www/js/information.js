@@ -4,8 +4,8 @@
   }
 //open detail
 
-function openInfo() {
+function openInfo(key) {
 
   var playlist;  
-    document.querySelector('#navigator').pushPage('playlist.html');
+    document.querySelector('#navigator').pushPage(key);
   }
