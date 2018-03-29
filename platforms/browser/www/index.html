@@ -13,15 +13,13 @@
     <script type="text/javascript" src="uilib/angular.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/AllLocation.js"></script>
-
+    <script type="text/javascript" src="js/AllLocation.js"></script> 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Inside KU-KPS</title>
 </head>
 
 <body>
-    <div ng-app="myApp" ng-controller="namesCtrl">
-
+    <div ng-app="myApp" >
         <ons-splitter>
             <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
                 <ons-page>
@@ -45,7 +43,8 @@
                     </ons-list>
                 </ons-page>
             </ons-splitter-side>
-            <ons-splitter-content id="navi" page="tab.html">
+            <ons-splitter-content>
+                <ons-navigator id="navi" page="tab.html"></ons-navigator>
             </ons-splitter-content>
         </ons-splitter>
 
@@ -77,7 +76,7 @@
         </template>
 
         <template id="search.html">
-            <ons-page id="search">
+            <ons-page id="search" ng-controller="namesCtrl">
                 <ons-toolbar style="background-color:#8CC084;">
                     <div class="center" style="margin-left:10%;margin-right:5%">
                         <input id="rcorners2" type="text" ng-model="test" placeholder="Search" style="width:90%; height:60%; text-align:center">
