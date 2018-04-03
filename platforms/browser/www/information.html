@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="uilib/uilib/onsen/css/onsenui.css" />
   <link rel="stylesheet" type="text/css" href="uilib/uilib/onsen/css/onsen-css-components.min.css" />
   <script type="text/javascript" src="uilib/uilib/onsen/js/onsenui.min.js"></script>
@@ -14,12 +14,18 @@
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/information.js"></script>
   <link rel="stylesheet" type="text/css" href="cdnjs.cloudflare.com/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <title>Information</title>
+
+
+
+
 </head>
 
 <body>
-  <ons-navigator id="navigator" page="info.html"></ons-navigator>
-  <template id="info.html">
+  <ons-navigator id="navigator" page="information.html"></ons-navigator>
+  <template id="information.html">
     <ons-page id="index">
       <ons-toolbar style="background-color:#8CC084; height:11%;">
         <div class="left">
@@ -31,10 +37,10 @@
       </ons-toolbar>
       <ons-card>
         <div class="content">
-          <ons-list onclick="openInfo()">
+          <ons-list onclick="openInfo('info1.html')">
             <ons-list-item>
               <div class="left">
-                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
               </div>
               <div class="center">
                 <span class="list-item__title">ข้อแนะนำในการผื่นขอผ่อนผันเข้าตรวจเลือกทหารกองประจำการ</span>
@@ -45,10 +51,10 @@
       </ons-card>
       <ons-card>
         <div class="content">
-          <ons-list>
+          <ons-list onclick="openInfo('info2.html')">
             <ons-list-item>
               <div class="left">
-                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
               </div>
               <div class="center">
                 <span class="list-item__title">การสมัครเรียนวิชาทหาร</span>
@@ -59,10 +65,10 @@
       </ons-card>
       <ons-card>
         <div class="content">
-          <ons-list>
+          <ons-list onclick="openInfo('info3.html')">
             <ons-list-item>
               <div class="left">
-                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
               </div>
               <div class="center">
                 <span class="list-item__title">การเบิกจ่ายค่ารักษาพยาบาลจาก กองทุนสวัสดิภาพนิสิต มก.กพส.</span>
@@ -73,10 +79,10 @@
       </ons-card>
       <ons-card>
         <div class="content">
-          <ons-list>
+          <ons-list onclick="openInfo('info4.html')">
             <ons-list-item>
               <div class="left">
-                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
               </div>
               <div class="center">
                 <span class="list-item__title">กำหนดเวลาเปิด-ปิด ประตู มก.กพส</span>
@@ -87,10 +93,10 @@
       </ons-card>
       <ons-card>
         <div class="content">
-          <ons-list>
+          <ons-list onclick="openInfo('info5.html')">
             <ons-list-item>
               <div class="left">
-                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
               </div>
               <div class="center">
                 <span class="list-item__title">สวัสดิการภายใน มก.กพส.</span>
@@ -101,10 +107,10 @@
       </ons-card>
       <ons-card>
         <div class="content">
-          <ons-list>
+          <ons-list onclick="openInfo('info6.html')">
             <ons-list-item>
               <div class="left">
-                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
               </div>
               <div class="center">
                 <span class="list-item__title">บริการหอพักนิสิต มก.กพส.</span>
@@ -115,10 +121,10 @@
       </ons-card>
       <ons-card>
         <div class="content">
-          <ons-list>
+          <ons-list onclick="openInfo('info7.html')">
             <ons-list-item>
               <div class="left">
-                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
               </div>
               <div class="center">
                 <span class="list-item__title">หมายเลขโทรศัพท์ เหตุด่วน-เหตุร้าย</span>
@@ -129,10 +135,10 @@
       </ons-card>
       <ons-card>
         <div class="content">
-          <ons-list>
+          <ons-list onclick="openInfo('info8.html')">
             <ons-list-item>
               <div class="left">
-                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
               </div>
               <div class="center">
                 <span class="list-item__title">นิสิตขอทำบัตรเข้า – ออก มก.กพส.ได้ที่ งานรักษาความปลอดภัย โทร 0-3435-1151</span>
@@ -143,10 +149,10 @@
       </ons-card>
       <ons-card>
         <div class="content">
-          <ons-list>
+          <ons-list onclick="openInfo('info9.html')">
             <ons-list-item>
               <div class="left">
-                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
               </div>
               <div class="center">
                 <span class="list-item__title">วิธีป้องกันการโจรกรรมรถ</span>
@@ -157,10 +163,24 @@
       </ons-card>
       <ons-card>
         <div class="content">
-          <ons-list>
+          <ons-list onclick="openInfo('info10.html')">
             <ons-list-item>
               <div class="left">
-                <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
+              </div>
+              <div class="center">
+                <span class="list-item__title">ข้อแนะนำเมื่อรถสูญหาย</span>
+              </div>
+            </ons-list-item>
+          </ons-list>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div class="content">
+          <ons-list onclick="openInfo('info11.html')">
+            <ons-list-item>
+              <div class="left">
+                <ons-icon size="30px" spin icon="md-spinner"></ons-icon>
               </div>
               <div class="center">
                 <span class="list-item__title">ข้อแนะนำเมื่อบัตรประจำตัวนิสิตหาย</span>
@@ -171,37 +191,520 @@
       </ons-card>
     </ons-page>
   </template>
-  <template id="playlist.html">
-      <ons-page id="playlist-page">
-        <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
-          <div class="left"><ons-back-button></ons-back-button></div>
-          
-        </ons-toolbar>
-    
-        <div class="content" style="text-align: center;">
+  <template id="info1.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
           <div class="playlist_content">
             <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
               <ons-carousel-item>
                 <div>
+                  <br/>
                   <div>
-                    <br/>
-                      <div >FOLLOW</div>
-                    </div>
-                
+                    <h5 style="text-align: center;color:red">ข้อแนะนำในการผื่นขอผ่อนผันเข้าตรวจเลือกทหารกองประจำการ</h5>
+                    <p>นิสิตที่ต้องเข้ารับการตรวจเลือกเป็นทหารกองประจำการในปีถัดไปสามารถยื่นเรื่องขอผ่อนผัน ฯ ได้ที่งานกิจการนิสิต
+                      อาคารกิจการนิสิต มก.กพส. ตั้งแต่วันที่ 1 ต.ค. – 30 พ.ย. ของทุกปี</p>
+                    <p style="color:red">เอกสารประกอบการยื่นผ่อนผัน ฯ</p>
+                    <ol style="color:red">
+                      <li>สำเนา สต.9 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 2 ฉบับ</li>
+                      <li>สำเนา สต.35&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2 ฉบับ</li>
+                      <li>สำเนาบัตรประจำตัวประชาชน&emsp;2 ฉบับ</li>
+                      <li>สำเนาบัตรประจำตัวนิสิต&emsp;&emsp;&emsp;2 ฉบับ</li>
+                      <li>หนังสือรับรองการเป็นนิสิต&emsp;&emsp;1 ฉบับ</li>
+                    </ol>
+                    <p style="color:red">(ติดต่อขอหนังสือรับรองการเป็นนิสิตได้ที่ งานบริการการศึกษา มก.กพส.)</p>
+                    <h2>สอบถามโทร 0-3428-1062-4</h2>
+                  </div>
                 </div>
+
               </ons-carousel-item>
-            
-              
             </ons-carousel>
           </div>
 
         </div>
-    
-    
-      
-    
-      </ons-page>
-    </template>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="info2.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <br/>
+                  <div>
+                    <h5 style="text-align: center;color:red">การสมัครเรียนวิชาทหาร</h5>
+                    <p>นิสิตที่มีความประสงค์รายงานตัวฝึกนักศึกษาวิชาทหารของ มก. ชั้นปีที่ 2-5 ชายและหญิง ให้ส่งเอกสารประกอบการรายงานตัว
+                      ดังนี้</p>
+
+                    <ul>
+                      <li>หนังสือรับรองวิทยฐานะการฝึกวิชาทหารฉบับจริง</li>
+                      <li>สำเนาบัตรนักศึกษาวิชาทหาร</li>
+                      <li>สำเนาบัตรประจำตัวประชาชน</li>
+                      <li>สำเนาบัตรประจำตัวนิสิต</li>
+                      <li>รูปถ่ายสี ขนาด 3 X 4 เซนติเมตร(1.5 นิ้ว)(แต่งเครื่องแบบรักศึกษาวิชาทหาร หน้าตรงไม่สวมหมวก ไม่ใส่แว่น
+                        จำนวน 1 รูป ถ่ายไม่เกิน 6 เดือน)</li>
+                    </ul>
+                    <p style="color:red">รายละเอียดเพิ่มเติม นายประวิทย์ โสมีชัย หัวหน้าหน่วยวิชาทหาร มก.</p>
+                    <h2 style="color:red">โทร 0-2118-0105-9 ต่อ 8530-1</h2>
+                  </div>
+                </div>
+
+              </ons-carousel-item>
+            </ons-carousel>
+          </div>
+
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="info3.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <br/>
+                  <div>
+                    <h5 style="text-align: center;color:red">การเบิกจ่ายค่ารักษาพยาบาลจาก กองทุนสวัสดิภาพนิสิต มก.กพส.</h5>
+                    <p>นิสิต มก.กพส.สามารถเบิกค่ารักษาพยาบาลที่เกิดจากอุบัติเหตุต่างๆ อาหารเป็นพิษ ไส้ติ่งอักเสบ ถูกสัตว์ทำร้ายและต้องรับวัคซีน
+                      โดยใช้เอกสารประกอบการเบิกจ่าย ดังนี้</p>
+
+                    <ul>
+                      <li>ใบเสร็จรับเงิน(ฉบับสุดท้ายต้องมีอายุไม่เกิน 180 วัน นับแต่วันที่ออกใบเสร็จ)</li>
+                      <li>ใบรับรองแพทย์จากโรงพยาบาลหรือคลินิกทุกที่ที่เข้ารับการรักษา</li>
+                      <li>สำเนาบัตรประจำตัวนิสิต</li>
+                      <li>สำเนา KU2 ฉบับปัจจุบัน</li>
+
+                    </ul>
+                    <p>ยื่นได้ที่งานกิจการนิสิต อาคารกิจการนิสิต มก.กพส สอบถามเพิ่มเติม</p>
+                    <h2 style="color:red">โทร 0-3428-1062-4,0-3435-1575,0-3435-1882-3</h2>
+                  </div>
+                </div>
+
+              </ons-carousel-item>
+            </ons-carousel>
+          </div>
+
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="info4.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <br/>
+                  <div>
+                    <h5 style="text-align: center;color:red">กำหนดเวลาเปิด-ปิด ประตู มก.กพส</h5>
+                    <p>ประตูมาลัยแมน(ประตู 401 ประตูหลัก) : เปิดให้เข้า-ออก 24 ชั่วโมง</p>
+                    <p>ประตูพระแท่น(ประตู 402 แยกพระแท่น) : เปิดให้เวลา 05.00 น. ปิดเวลา 23.00 น.</p>
+                    <p>ประตูชลประทาน(ประตู 403 รร.สาธิตฯ) : เปิดให้เข้า-ออก 24 ชั่วโมง</p>
+                    <p>ประตูจันทรุเบกษา(ประตู 404 โดมแมลง) : เปิดให้เวลา 06.00 น. ปิดเวลา 20.00 น.</p>
+                    <br/>
+                    <p style="color:red">ข้อควรปฏิบัติในการใช้ถนนภายใน มก.กพส.</p>
+                    <ul style="color:red">
+                      <li>ผู้ขับขี่และซ้อนรถ จยย.ต้องสวมหมวกนิรภัย</li>
+                      <li>ใช้ความเร็วตามกำหนดในทุกเส้นทาง</li>
+                      <li>งดใช้เครื่องมือสื่อสารขณะขับขี่</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+              </ons-carousel-item>
+            </ons-carousel>
+          </div>
+
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="info5.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <br/>
+                  <div>
+                    <h5 style="text-align: center;color:red">สวัสดิการภายใน มก.กพส.</h5>
+                    <p>ท่ารถตู้ มก.กพส.-กรุงเทพฯ จำนวน 3 สาย</p>
+                    <p>1.ท่ารถตู้บริเวณหน้าคณะ ศวท. 2 สาย</p>
+                    <ul>
+                      <li>มก.กพส –บางใหญ่ –แคราย –บางเขน โทร 08-6061-8273(ท่า มก.กพส.) โทร 08-5223-7415(ท่า กทม.)
+                      </li>
+                      <li>มก.กพส –นครปฐม –เซ็นทรัลศาลายา –เซ็นทรัลปิ่นเกล้า โทร 09-2779-2705(ท่า มก.กพส.) โทร 09-2779-2704(ท่า
+                        ปิ่นเกล้า)
+                      </li>
+
+                    </ul>
+                    <p>2.ท่ารถตู้บริเวณหน้าอาคารการเรียนรู้</p>
+                    <ul>
+                      <li>มก.กพส –สวนจตุจักร-อนุสาวรีย์ชัยฯ โทร 09-007-0635(ท่า มก.กพส.) โทร 09-0097-0648(ท่า อนุสาวรีย์ชัยฯ)
+                      </li>
+
+                    </ul>
+                    <p style="color:green">ท่ารถจักรยานยนต์รับจ้าง ภายใน มก.กพส.บริการรถ จยย. รับจ้าง ตั้งอยู่บริเวณประตูมาลัยแมน โทร 0-3435-5313</p>
+
+                  </div>
+                </div>
+
+              </ons-carousel-item>
+            </ons-carousel>
+          </div>
+
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="info6.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <br/>
+                  <div>
+                    <h5 style="text-align: center;color:red">บริการหอพักนิสิต มก.กพส.	</h5>
+                    <p>1. หอพักนิสิตแบบธรรมดา</p>
+                    <p>อัตรา 2,000 บาท/คน/ภาคการศึกษา ค่าน้ำฟรี ค่าไฟฟ้า 4.5 บาท/หน่วย ดังนี้</p>
+                    <ul>
+                      <li>หอพักนิสิตชาย จำนวน 12 หลัง พักอาศัยได้ 3-5 คน/ห้อง
+                      </li>
+                      <li>หอพักนิสิตหญิง จำนวน 12 หลัง พักอาศัยได้ 3-5 คน/ห้อง
+                      </li>
+
+                    </ul>
+                    <p style="color:red">2.หอพักชาย ปรับอากาศ พร้อมฟอร์นิเจอร์จำนวน 2 หลัง  </p>
+                    <ul style="color:red">
+                      <li>อัตรา 4,500 บาท/2 คน/เดือน 
+                      </li>
+                      <li>ค่าน้ำ 5 บาท/หน่วย  
+                      </li>
+                      <li>ค่าไฟฟ้า 4.5 บาท/หน่วย 
+                      </li>
+
+                    </ul>
+                    <p >3.หอพักหญิง ปรับอากาศ พร้อมฟอร์นิเจอร์จำนวน 5 หลัง  </p>
+                    <ul >
+                      <li>อัตรา 6,000 บาท/4คน/เดือน 
+                      </li>
+                      <li>ค่าน้ำ 5 บาท/หน่วย  
+                      </li>
+                      <li>ค่าไฟฟ้า 4.5 บาท/หน่วย 
+                      </li>
+
+                    </ul>
+                    <p style="color:red">สอบถามโทร 0-3428-1062-4,0-3435-1570,0-3435-1575,0-3435-1882-3 ต่อ 165,154</p>
+
+                  </div>
+                </div>
+
+              </ons-carousel-item>
+            </ons-carousel>
+          </div>
+
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="info7.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <br/>
+                  <div>
+                    <h5 style="text-align: center;color:red">หมายเลขโทรศัพท์ เหตุด่วน-เหตุร้าย	</h5>
+                    <p>หน่วยงานภายใน</p>
+                    <p>งานรักษาความปลอดภัย เหตุด่วน-เหตุร้าย :0-3435-1151</p>
+                    <p>สถานพยาบาล : 0-3435-1611</p>
+                    <p>แจ้งปัญหาไฟฟ้า ประปา มก.กพส. : 0-3435-1012</p>
+                    <p style="color:red">หน่วยงานภายนอก</p>
+                    <p style="color:red">สภ.กำแพงแสน :0-3435-1219,0-3435-5445-6</p>
+                    <p style="color:red">รพ.กำแพงแสน : 0-3428-1686-7</p>
+                    <p style="color:red">รพ.จันทรุเบกษาฯ(รร.การบิน กพส.) : 0-3499-6447-51</p>
+                    <p style="color:red">หน่วยแพทย์ฉุกเฉิน : 1669(ทั่วประเทศ)</p>
+
+                  </div>
+                </div>
+
+              </ons-carousel-item>
+            </ons-carousel>
+          </div>
+
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="info8.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <br/>
+                  <div>
+                    <h5 style="text-align: center;color:red">นิสิตขอทำบัตรเข้า – ออก มก.กพส.ได้ที่ งานรักษาความปลอดภัย โทร 0-3435-1151	</h5>
+                    <p>เอกสารประกอบการขอบัตรผ่าน</p>
+                    <ul>
+                      <li>
+                        สำเนาบัตรประจำตัวนิสิต
+                      </li>
+                      <li>
+                        สำเนาทะเบียนบ้านของนิสิต
+                      </li>
+                      <li>
+                        รูปถ่าย 1 นิ้ว 2 รูป
+                      </li>
+                      <li>
+                        สำเนาคู่มือจดทะเบียนรถ
+                      </li>
+                    </ul>
+                  
+
+                  </div>
+                </div>
+
+              </ons-carousel-item>
+            </ons-carousel>
+          </div>
+
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="info9.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <br/>
+                  <div>
+                    <h5 style="text-align: center;color:red">วิธีป้องกันการโจรกรรมรถ</h5>
+                   
+                    <ul>
+                      <li>
+                        ล็อกมากกว่า 1 จุด เช่น ล็อคล้อ ล็อคขาตั้ง
+                      </li>
+                      <li>
+                        ไม่นำสำเนาคู่รถเก็บไว้ในตัวรถ
+                      </li>
+                      <li>
+                        ติดตั้งสัญญาณกันขโมย
+                      </li>
+                      <li>
+                        ไม่ควรให้ผู้ไม่คุ้นเคยยืมรถ
+                      </li>
+                      <li>
+                        หากซื้อรถมือสอง ให้เปลี่ยนกุญแจใหม่ทันที
+                      </li>
+                    </ul>
+                  
+
+                  </div>
+                </div>
+
+              </ons-carousel-item>
+            </ons-carousel>
+          </div>
+
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="info10.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <br/>
+                  <div>
+                    <h5 style="text-align: center;color:red">ข้อแนะนำเมื่อรถสูญหาย</h5>
+                   <p>กรณีสูญหายภายใน มก.กพส.</p>
+                    <ul>
+                      <li>
+                        แจ้งลักษณะประจำรถ หมายเลขทะเบียนรถที่สูญหายให้หน่วยงานรักษาความปลอดภัยทราบ โทร 0-3428-1061 เพื่อแจ้งเจ้าหน้าที่รักษาคาวมปลอดภัยประจำจุดต่างๆเพื่อเฝ้าระวัง
+                      </li>
+                      <li>
+                        เตรียมสำเนาหรือคู่มือจดทะเบียนรถเพื่อพบพนักงานสอบสวนห้องที่ที่เกิดเหตุ
+                      </li>
+                      <li>
+                        หากมีรูปถ่ายให้นำมาประกอบการแจ้งด้วย
+                      </li>
+                      
+                    </ul>
+                    <p style="color:red">กรณีสูญหายภายนอก มก.กพส.</p>
+                    <ul style="color:red">
+                      <li>
+                        แจ้งสายด่วนรถสูญหาย 1192
+                      </li>
+                      <li>
+                        เตรียมสำเนาหรือคู่มือจดทะเบียนรถเพื่อพบพนักงานสอบสวนห้องที่ที่เกิดเหตุ
+                      </li>
+                      <li>
+                        จดจำตำหนิรูปพรรณรถให้ชัดเจน
+                      </li>
+                      <li>
+                        หากมีรูปถ่ายให้นำมาประกอบการแจ้งด้วย
+                      </li>
+                      
+                    </ul>
+                  
+
+                  </div>
+                </div>
+
+              </ons-carousel-item>
+            </ons-carousel>
+          </div>
+
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+  <template id="info11.html">
+    <ons-page id="playlist-page">
+      <ons-toolbar modifier="transparent" style="background-color:#8CC084; height:11%;">
+        <div class="left">
+          <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="color:white">
+
+        </div>
+      </ons-toolbar>
+      <ons-card>
+        <div class="content" style="text-align: left;">
+          <div class="playlist_content">
+            <ons-carousel class="carousel" swipeable auto-scroll id="carousel">
+              <ons-carousel-item>
+                <div>
+                  <br/>
+                  <div>
+                    <h5 style="text-align: center;color:red">ข้อแนะนำเมื่อบัตรประจำตัวนิสิตหาย</h5>
+                   <p style="color:green">นิสิตที่มีรหัสประจำตัวนิสิตที่ขึ้นต้นด้วย 59 เป็นต้นไปให้ดำเนินการติดต่อขอมีบัตรประจำตัวนิสิตใหม่ได้ที่กองบริหารวิชาการและนิสิต อาคารศูนย์เรียนรวม 3</p>
+                    <p>นิสิตที่มีรหัสประจำตัวนิสิตที่ขึ้นน้อยกว่า 59 ให้ดำเนินการแจ้งอายัดบัตร ATM กับ ธนาคารไทยพาณิชย์ โทร 0-2777-7777 และ ติดต่อขอออกบัตรประจำตัวนิสิตทดแทนฉบับที่สูญหายที่ กองบริหารวิชาการและนิสิตอาคารศูนย์เรียนรวม 3</p>
+                  <p style="color:red">บัตรนิสิตหายโทร 0-3428-1094-6</p>
+
+                  </div>
+                </div>
+
+              </ons-carousel-item>
+            </ons-carousel>
+          </div>
+
+        </div>
+      </ons-card>
+    </ons-page>
+  </template>
+
+
+
+
 
 </body>
 
