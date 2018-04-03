@@ -13,13 +13,13 @@
     <script type="text/javascript" src="uilib/angular.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/AllLocation.js"></script> 
+    <script type="text/javascript" src="js/AllLocation.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Inside KU-KPS</title>
 </head>
 
 <body>
-    <div ng-app="myApp" >
+    <div ng-app="myApp">
         <ons-splitter>
             <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
                 <ons-page>
@@ -38,7 +38,7 @@
                         </ons-list-item>
                         <ons-list-item onclick="fn.load('about.html')" style="margin-top:5%" tappable>
                             <ons-icon icon="md-help" style="color:#B9E28C;margin-right:10%"></ons-icon>
-                           <p style="opacity:0.7"> About</p>
+                            <p style="opacity:0.7"> About</p>
                         </ons-list-item>
                     </ons-list>
                 </ons-page>
@@ -49,12 +49,14 @@
         </ons-splitter>
 
         <template id="tab.html">
-            <ons-tabbar swipeable position="bottom">
-                <ons-tab page="index.html" label="Home" icon="ion-home, material:md-home" active>
-                </ons-tab>
-                <ons-tab page="search.html" label="search" icon="md-search" active-icon="md-search">
-                </ons-tab>
-            </ons-tabbar>
+            <ons-page>
+                <ons-tabbar swipeable position="bottom">
+                    <ons-tab page="index.html" label="Home" icon="ion-home, material:md-home" active>
+                    </ons-tab>
+                    <ons-tab page="search.html" label="search" icon="md-search" active-icon="md-search">
+                    </ons-tab>
+                </ons-tabbar>
+            </ons-page>
         </template>
 
         <template id="index.html">
@@ -84,7 +86,7 @@
                 </ons-toolbar>
                 <ons-card style="margin-top:5%">
                     <ons-list>
-                        <ons-list-item ng-repeat="i in data| filter : test" onclick="">
+                        <ons-list-item  ng-repeat="i in data| filter : test" tappable ng-click="ons.notification.alert('Hi'+{{i.name}})" >
                             <div class="left">
                                 <img src="img/{{i.category}}.svg" alt="" width="70px" height="90px">
                             </div>
@@ -99,4 +101,5 @@
         </template>
     </div>
 </body>
+
 </html>
