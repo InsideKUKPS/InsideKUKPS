@@ -1,11 +1,11 @@
 //back page
-  function goBack() {
-    window.history.back();
-  }
+function goBack() {
+  window.history.back();
+}
 //open detail
 
-function openInfo() {
+function openInfo(key) {
 
-  var playlist;  
-    document.querySelector('#navigator').pushPage('playlist.html');
-  }
+var playlist;  
+  document.querySelector('#navigator').pushPage(key);
+}
