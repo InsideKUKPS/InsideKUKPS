@@ -58,4 +58,10 @@ function openInformation(){
 
 angular.module('myApp', []).controller('namesCtrl', function ($scope) {
   $scope.data = obj;
+  //$scope.GotoMarker = GotoMarker();
 });
+
+//function GotoMarker(lat,lng){
+  //map.setZoom(19);
+  //map.setCenter({lat : lat , lng : lng});
+//}
