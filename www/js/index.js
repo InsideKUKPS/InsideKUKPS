@@ -55,6 +55,9 @@ fn.load = function (page) {
 function openInformation(){
     window.location="information.html";
 }
+function openCall(){
+  window.location="call.html";
+}
 
 angular.module('myApp', []).controller('namesCtrl', function ($scope) {
   $scope.data = obj;
