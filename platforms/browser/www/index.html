@@ -59,6 +59,7 @@
             </ons-page>
         </template>
 
+
         <template id="index.html">
             <ons-page id="index">
                 <ons-toolbar style="background-color:#8CC084;">
@@ -71,6 +72,32 @@
                         Inside KU-KPS
                     </div>
                 </ons-toolbar>
+                <ons-speed-dial position="bottom right" direction="up">
+                    <ons-fab>
+                        <ons-icon icon="filter" style="color: rgb(65, 117, 61);"></ons-icon>
+                    </ons-fab>
+                    <ons-speed-dial-item>
+                        <img src="img/sport.svg"></img>
+                    </ons-speed-dial-item>
+                    <ons-speed-dial-item>
+                        <img src="img/dorm.svg"></img>
+                    </ons-speed-dial-item>
+                    <ons-speed-dial-item>
+                        <img src="img/market.svg"></img>
+                    </ons-speed-dial-item>
+                    <ons-speed-dial-item>
+                        <img src="img/officer.svg"></img>
+                    </ons-speed-dial-item>
+                    <ons-speed-dial-item>
+                        <img src="img/hospital.svg"></img>
+                    </ons-speed-dial-item>
+                    <ons-speed-dial-item>
+                        <img src="img/education.svg"></img>
+                    </ons-speed-dial-item>
+                    <ons-speed-dial-item>
+                        <img src="img/food.svg"></img>
+                    </ons-speed-dial-item>
+                </ons-speed-dial>
                 <div id="map" style="margin-top:0%"></div>
                 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
                 </script>
@@ -86,7 +113,7 @@
                 </ons-toolbar>
                 <ons-card style="margin-top:5%">
                     <ons-list>
-                        <ons-list-item  ng-repeat="i in data| filter : test" tappable onclick="ons.notification.alert('Hi')" >
+                        <ons-list-item ng-repeat="i in data| filter : test" tappable onclick="ons.notification.alert('Hi')">
                             <div class="left">
                                 <img src="img/{{i.category}}.svg" alt="" width="70px" height="90px">
                             </div>
@@ -101,4 +128,5 @@
         </template>
     </div>
 </body>
+
 </html>

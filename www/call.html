@@ -1,133 +1,140 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
 <head>
-    <title>FOOD ORDER</title>
-
-    <!-- meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-
-    <!-- css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="assets/css/ready.css">
-    <link rel="stylesheet" href="assets/css/demo.css">
-
-
-    <!-- google font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-
-    <!-- js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="uilib/uilib/onsen/css/onsenui.css" />
+    <link rel="stylesheet" type="text/css" href="uilib/uilib/onsen/css/onsen-css-components.min.css" />
+    <script type="text/javascript" src="uilib/uilib/onsen/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript" src="js/call.js"></script>
-    <script src="assets/js/core/jquery.3.2.1.min.js"></script>
-    <script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-    <script src="assets/js/core/popper.min.js"></script>
-    <script src="assets/js/core/bootstrap.min.js"></script>
-    <script src="assets/js/plugin/chartist/chartist.min.js"></script>
-    <script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
-    <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-    <script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-    <script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
-    <script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
-    <script src="assets/js/plugin/chart-circle/circles.min.js"></script>
-    <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-    <script src="assets/js/ready.min.js"></script>
-
 </head>
-
 <body>
-    <table class="table table-head-bg-success">
-        <thead>
-
-            <tr>
-                <th scope="col" height="50" style="text-align: left;">
-                    <h6><i class="la la-angle-left" onclick="goBack()"></i></h6>
-                </th>
-                <th scope="col" height="50" style="text-align: left 30%;">
-                        <h6>Call</h6>
-                    </th>
-            </tr>
-        </thead>
-
-    </table>
-    <table class="table table-striped mt-3">
-
-        <tbody>
-            <tr>
-                <td></td>
-                <td>รถจักรยานยนต์รับจ้าง</td>
-                <td>034355313</td>
-                <td><a class="" href="tel://034355313"><i class="la la-phone-square"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>ท่ารถตู้ มก.กพส.-หมอชิต</td>
-                <td>0900970635</td>
-                <td><a class="" href="tel://0900970635"><i class="la la-phone-square"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>ท่ารถตู้ มก.กพส.-เซ็นทรัลปิ่นเกล้า</td>
-                <td>0927792705</td>
-                <td><a class="" href="tel://0927792705"><i class="la la-phone-square"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>ท่ารถตู้ มก.กพส.-บางเขน</td>
-                <td>0860618273</td>
-                <td><a class="" href="tel://0860618273"><i class="la la-phone-square"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>คณะเกษตร กำแพงแสน</td>
-                <td>034281083</td>
-                <td><a class="" href="tel://034281083"><i class="la la-phone-square"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>คณะวิศวกรรมศาสตร์ กำแพงแสน</td>
-                <td>034281074</td>
-                <td><a class="" href="tel://034281074"><i class="la la-phone-square"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>คณะสัตวแพทยศาสตร์ กำแพงแสน</td>
-                <td>034351901</td>
-                <td><a class="" href="tel://034351901"><i class="la la-phone-square"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>คณะวิทยาศาสตร์การกีฬา</td>
-                <td>034355258</td>
-                <td><a class="" href="tel://034355258"><i class="la la-phone-square"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>คณะศึกษาศาสตร์และพัฒนศาสตร์</td>
-                <td>034351898</td>
-                <td><a class="" href="tel://034351898"><i class="la la-phone-square"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>สถานีวิจัยประมง(คณะประมง)</td>
-                <td>034351594</td>
-                <td><a class="" href="tel://034351594"><i class="la la-phone-square"></a></td>
-            </tr>
-           
-        
-      
-  
-        </tbody>
-    </table>
-
-
+    <ons-page>
+        <ons-toolbar style="background-color:#8CC084; ">
+            <div class="left" style="margin-left: 5%;margin-top: 2%;">
+                 <i class="fa fa-angle-left" style="font-size:40px;color:white; " onclick="goBack()"> </i>
+            </div>
+            <div class="center" style="color:white; ">
+                Call
+            </div>
+        </ons-toolbar>
+        <ons-card>
+            <ons-list>
+                <ons-list-item>
+                    <div class="left">
+                        <a class="" href="tel:034355313">
+                            <ons-icon icon="md-phone" style="font-size:30px;color:#8CC084;"></ons-icon>
+                        </a>
+                    </div>
+                    <div class="center">
+                        <span class="list-item__title">รถจักรยานยนต์รับจ้าง</span>
+                        <span class="list-item__subtitle">tel:034355313</span>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <a class="" href="tel:0900970635">
+                            <ons-icon icon="md-phone" style="font-size:30px;color:#8CC084;"></ons-icon>
+                        </a>
+                    </div>
+                    <div class="center">
+                        ท่ารถตู้ มก.กพส.-หมอชิต
+                        <span class="list-item__subtitle">tel:0900970635</span>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <a class="" href="tel:0927792705">
+                            <ons-icon icon="md-phone" style="font-size:30px;color:#8CC084;"></ons-icon>
+                        </a>
+                    </div>
+                    <div class="center">
+                        ท่ารถตู้ มก.กพส.-เซ็นทรัลปิ่นเกล้า
+                        <span class="list-item__subtitle">tel:0927792705</span>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <a class="" href="tel:0860618273">
+                            <ons-icon icon="md-phone" style="font-size:30px;color:#8CC084;"></ons-icon>
+                        </a>
+                    </div>
+                    <div class="center">
+                        ท่ารถตู้ มก.กพส.-บางเขน
+                        <span class="list-item__subtitle">tel:0860618273</span>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <a class="" href="tel:034281083">
+                            <ons-icon icon="md-phone" style="font-size:30px;color:#8CC084;"></ons-icon>
+                        </a>
+                    </div>
+                    <div class="center">
+                        คณะเกษตร กำแพงแสน
+                        <span class="list-item__subtitle">tel:034281083</span>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <a class="" href="tel:034281074">
+                            <ons-icon icon="md-phone" style="font-size:30px;color:#8CC084;"></ons-icon>
+                        </a>
+                    </div>
+                    <div class="center">
+                         คณะวิศวกรรมศาสตร์ กำแพงแสน
+                         <span class="list-item__subtitle">tel:034281074</span>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <a class="" href="tel:034351901">
+                            <ons-icon icon="md-phone" style="font-size:30px;color:#8CC084;"></ons-icon>
+                        </a>
+                    </div>
+                    <div class="center">
+                        คณะสัตวแพทยศาสตร์ กำแพงแสน
+                        <span class="list-item__subtitle">tel:034351901</span>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <a class="" href="tel:034355258">
+                            <ons-icon icon="md-phone" style="font-size:30px;color:#8CC084;"></ons-icon>
+                        </a>
+                    </div>
+                    <div class="center">
+                        คณะวิทยาศาสตร์การกีฬา
+                        <span class="list-item__subtitle">tel:034355258</span>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <a class="" href="tel:034351898">
+                            <ons-icon icon="md-phone" style="font-size:30px;color:#8CC084;"></ons-icon>
+                        </a>
+                    </div>
+                    <div class="center">
+                        คณะศึกษาศาสตร์และพัฒนศาสตร์
+                        <span class="list-item__subtitle">tel:034351898</span>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="left">
+                        <a class="" href="tel:034351594">
+                            <ons-icon icon="md-phone" style="font-size:30px;color:#8CC084;"></ons-icon>
+                        </a>
+                    </div>
+                    <div class="center">
+                        สถานีวิจัยประมง(คณะประมง)
+                        <span class="list-item__subtitle">tel:034351594</span>
+                    </div>
+                </ons-list-item>
+            </ons-list>
+        </ons-card>
+    </ons-page>
 </body>
-
 </html>
