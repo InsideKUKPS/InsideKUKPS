@@ -14,7 +14,6 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/AllLocation.js"></script>
-
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Inside KU-KPS</title>
 </head>
@@ -29,7 +28,7 @@
                             <ons-icon icon="ion-home, material:md-home" style="color:white;margin-right:10%"></ons-icon>
                             <p style="opacity:0.7">Home</p>
                         </ons-list-item>
-                        <ons-list-item onclick="fn.load('call.html')" style="margin-top:5%" tappable>
+                        <ons-list-item onclick="openCall()" style="margin-top:5%" tappable>
                             <ons-icon icon="md-phone" style="color:#B9E28C;margin-right:10%"></ons-icon>
                             <p style="opacity:0.7">Call</p>
                         </ons-list-item>
@@ -58,7 +57,6 @@
                     </ons-tab>
                 </ons-tabbar>
             </ons-page>
-
         </template>
 
         <template id="index.html">
