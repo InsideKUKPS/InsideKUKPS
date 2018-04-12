@@ -36,7 +36,7 @@
                             <ons-icon icon="md-info" style="color:#B9E28C;margin-right:10%"></ons-icon>
                             <p style="opacity:0.7">Information</p>
                         </ons-list-item>
-                        <ons-list-item onclick="fn.load('about.html')" style="margin-top:5%" tappable>
+                        <ons-list-item onclick="openAbout();" style="margin-top:5%" tappable>
                             <ons-icon icon="md-help" style="color:#B9E28C;margin-right:10%"></ons-icon>
                             <p style="opacity:0.7"> About</p>
                         </ons-list-item>
@@ -59,7 +59,6 @@
             </ons-page>
         </template>
 
-
         <template id="index.html">
             <ons-page id="index">
                 <ons-toolbar style="background-color:#8CC084;">
@@ -76,7 +75,7 @@
                     <ons-fab>
                         <ons-icon icon="filter" style="color: rgb(65, 117, 61);"></ons-icon>
                     </ons-fab>
-                    <ons-speed-dial-item onclick="initMap()" >
+                    <ons-speed-dial-item onclick="initMap()">
                         <img src="img/All.svg"></img>
                     </ons-speed-dial-item>
                     <ons-speed-dial-item onclick="initMap2('sport')">
@@ -116,7 +115,7 @@
                 </ons-toolbar>
                 <ons-card style="margin-top:5%">
                     <ons-list>
-                        <ons-list-item ng-repeat="i in data| filter : test" tappable onclick="ons.notification.alert('Hi')">
+                        <ons-list-item ng-repeat="i in data| filter : test" tappable ng-click="Pfunc(i);">
                             <div class="left">
                                 <img src="img/{{i.category}}.svg" alt="" width="70px" height="90px">
                             </div>
@@ -124,12 +123,12 @@
                                 <span class="list-item__title">{{i.name}}</span>
                                 <span class="list-item__subtitle">Lat : {{i.lat}}, Lng : {{i.lng}}</span>
                             </div>
+                            <div></div>
                         </ons-list-item>
                     </ons-list>
                 </ons-card>
             </ons-page>
         </template>
-    </div>
 </body>
 
 </html>
