@@ -76,18 +76,22 @@ fn.load = function (page) {
 };
 
 function openInformation(){
-    window.location="information.html";
+  window.location="information.html";
 }
+
 function openCall(){
   window.location="call.html";
 }
 
+function openAbout(){
+  window.location="About.html";
+}
+
 angular.module('myApp', []).controller('namesCtrl', function ($scope) {
   $scope.data = obj;
-  //$scope.GotoMarker = GotoMarker();
+  $scope.Pfunc = function(obj){
+    document.querySelector('ons-tabbar').setActiveTab(0);
+    map.setZoom(19);
+    map.setCenter( { lat: obj.lat, lng: obj.lng });
+  }
 });
-
-//function GotoMarker(lat,lng){
-  //map.setZoom(19);
-  //map.setCenter({lat : lat , lng : lng});
-//}
