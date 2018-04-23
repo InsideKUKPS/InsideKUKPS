@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/navigator.css">
+    <link rel="stylesheet" type="text/css" href="uilib/uilib/onsen/css/onsenui.css" />
+    <link rel="stylesheet" type="text/css" href="uilib/uilib/onsen/css/onsen-css-components.min.css" />
+    <!-- js -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/navigator.js"></script>
+    <script type="text/javascript" src="js/AllLocation.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="uilib/uilib/onsen/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="uilib/uilib/onsen/js/jquery.min.js"></script>
+    <script type="text/javascript" src="uilib/angular.min.js"></script>
+
+    <title>Navigator</title>
+</head>
+
+<body>
+
+    <ons-page>
+
+        <ons-toolbar style="background-color:#8CC084; ">
+            <div class="left" style="margin-left: 5%;margin-top: 2%;">
+                <i class="fa fa-angle-left" style="font-size:40px;color:white; " onclick="goBack()"> </i>
+            </div>
+            <div class="center" style="color:white; ">
+                Navigator
+            </div>
+        </ons-toolbar>
+        <ons-card>
+
+            <input id="start" style="color: black;" type="hidden" value="14.024228,99.976442">
+            <b>Go to: </b>
+            <select id="end">
+            </select>
+        <br/>  <br/>
+            <b>Mode of Travel: </b>
+            <select id="mode">
+                <option value="DRIVING">Driving</option>
+                <option value="WALKING">Walking</option>
+            </select>
+        </ons-card>
+        <div id="overlay" onclick="off()">
+            <div id="right-panel"></div>
+        </div>
+        <ons-fab id="showPanal" position="bottom right" ripple onclick="on()">
+            <img src="img/compass.svg" onclick="on()"> ></img>
+        </ons-fab>
+        <div id="map"></div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsn-mKR6N9fT8tyF49wp0CC4bNVo8Vw4s&callback=initMap">
+        </script>
+    </ons-page>
+</body>
+
+</html>

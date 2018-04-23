@@ -1,7 +1,6 @@
 obj = [
       //เกษตร
       {name:"คณะเกษตร",category:"education",lat:14.024165,lng:99.973146},
-      {name:"คณะเกษตร",category:"education",lat:14.024165,lng:99.973146},
       //ศวท
       {name:"ตึกปฏิบัติการทางวิทยาศาสตร์ [SC 14]",category:"education",lat:14.025943,lng:99.977739},
       {name:"อาคารการเรียนรู้ทางภาษา",category:"education",lat:14.024732,lng:99.978838},
@@ -26,7 +25,7 @@ obj = [
       {name:"นนทรี ฟู๊ดเซ็นเตอร์ [โรงส้ม]",category:"food",lat:14.027670,lng:99.978633},
       {name:"ป้าสำราญ แคนตั๊กกี้",category:"food",lat:14.021844,lng:99.983099},
       {name:"ชาพะยอม",category:"food",lat:14.020984,lng:99.989773},
-      {name:"",category:"hospital",lat:14,lng:99},
+      // {name:"",category:"hospital",lat:14,lng:99},
       {name:"สวน 72 พรรษา มหาราชนี",category:"attractions",lat:14.026756,lng:99.977176},
       {name:"สนามฟุตบอล",category:"sport",lat:14.021390,lng:99.984359},
       {name:"7-11 สาขาหอพัก 2",category:"market",lat:14.026220,lng:99.983096},
@@ -34,6 +33,6 @@ obj = [
       {name:"7-11 สาขากองบริหารวิชาการและนิสิต",category:"market",lat:14.021791,lng:99.977424},
       {name:"สหกรณ์ร้านค้า",category:"market",lat:14.021462,lng:99.977384},
       {name:"สหกรณ์ร้านค้า สาขาหอพัก",category:"market",lat:14.027385,lng:99.979620},
-      {name:"",category:"dorm",lat:14,lng:99},
+      // {name:"",category:"dorm",lat:14,lng:99},
 ];
 

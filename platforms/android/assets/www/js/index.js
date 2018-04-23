@@ -95,3 +95,24 @@ angular.module('myApp', []).controller('namesCtrl', function ($scope) {
     map.setCenter( { lat: obj.lat, lng: obj.lng });
   }
 });
+
+//start navigator
+function openNavigator() {
+  window.open("navigator.html");
+}
+// onSuccess Callback
+//   This method accepts a `Position` object, which contains
+//   the current GPS coordinates
+//
+// var onSuccess = function (position) {
+//   window.open("navigator.html?latitude=" + position.coords.latitude + "&longitude=" + position.coords.longitude);
+// };
+
+// // onError Callback receives a PositionError object
+// //
+// function onError(error) {
+//   alert('code: ' + error.code + '\n' +
+//     'message: ' + error.message + '\n');
+// }
+
+//end navigator
